@@ -49,6 +49,10 @@ class Item
     @price = input_price
   end
 
+  def print_info
+    puts "#{color} #{brand} #{item} costs #{price}."
+  end
+
 end
 
 item1 = Item.new("grill", "silver", 99.99, "Grillmaster")
@@ -61,3 +65,4 @@ puts item3.brand
 puts item3.price
 item3.set_price = 8.99
 puts item3.price
+puts item1.print_info
