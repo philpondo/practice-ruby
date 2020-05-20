@@ -26,11 +26,11 @@ class Item
   attr_reader :item, :color, :price, :brand
   attr_writer :price
   
-  def initialize(input_item, input_color, input_price, input_brand)
-    @item = input_item
-    @color = input_color
-    @price = input_price
-    @brand = input_brand
+  def initialize(input_options)
+    @item = input_options[:item]
+    @color = input_options[:color]
+    @price = input_options[:price]
+    @brand = input_options[:brand]
   end
 
   def print_info
@@ -39,9 +39,9 @@ class Item
 
 end
 
-item1 = Item.new("grill", "silver", 99.99, "Grillmaster")
-item2 = Item.new("twinkie", "yellow", 2.99, "Hostess")
-item3 = Item.new("sock, 4-pack", "white", 9.99, "Hane's")
+item1 = Item.new(item: "grill", color: "silver", price: 99.99, brand: "Grillmaster")
+item2 = Item.new(item: "twinkie", color: "yellow", price: 2.99, brand: "Hostess")
+item3 = Item.new(item: "sock, 4-pack", color: "white", price: 9.99, brand: "Hane's")
 
 puts item1.item
 puts item2.color
