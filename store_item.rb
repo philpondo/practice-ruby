@@ -22,31 +22,15 @@ item3 = {
 }
 
 class Item
+  
+  attr_reader :item, :color, :price, :brand
+  attr_writer :price
+  
   def initialize(input_item, input_color, input_price, input_brand)
     @item = input_item
     @color = input_color
     @price = input_price
     @brand = input_brand
-  end
-
-  def item
-    @item
-  end
-
-  def color
-    @color
-  end
-
-  def price
-    @price
-  end
-
-  def brand
-    @brand
-  end
-
-  def set_price=(input_price)
-    @price = input_price
   end
 
   def print_info
@@ -63,6 +47,6 @@ puts item1.item
 puts item2.color
 puts item3.brand
 puts item3.price
-item3.set_price = 8.99
+item3.price = 8.99
 puts item3.price
 puts item1.print_info
